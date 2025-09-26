@@ -1,0 +1,11 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"bg3ModHelper.rootModPath": "i:\\SteamLibrary\\steamapps\\common\\Baldurs Gate 3\\Data\\Mods\\FabricManufacturer_f3ced6ee-12b5-1347-1232-7e9e2ce00354",
+		"bg3ModHelper.packingPriority": 0
+	}
+}

@@ -1,0 +1,32 @@
+{
+    "SchemaVersion": 1,
+    "ModName": "Fabric Manufacturer",
+    "Tabs": [
+            {
+                "TabId": "FM-main",
+                "TabName": "FM",
+                "Sections": [
+                    {
+                        "SectionId": "general_settings",
+                        "SectionName": "",
+                        "Settings": [
+                            {
+                                "Id": "fm_toggle_window",
+                                "Name": "! Toggle window",
+                                "Type": "keybinding_v2",
+                                "Default": {
+                                    "Keyboard": {
+                                        "Key": "",
+                                        "ModifierKeys": []
+                                    }
+                                },
+                                "Options": {
+                                    "BlockIfLevelNotStarted": true
+                                }
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
