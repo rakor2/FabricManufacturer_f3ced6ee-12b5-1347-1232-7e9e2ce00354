@@ -50,10 +50,24 @@ function Window:FMWindow()
     local btnUpdateEquipment = p:AddButton('Get cloth parameters')
     btnUpdateEquipment.OnClick = function ()
         UpdateElements()
+        SaveInitialParameters()
     end
 
-
+    GlobalsIMGUI.btnSaveInits = p:AddButton('Save parameters')
+    GlobalsIMGUI.btnSaveInits.SameLine = true
+    GlobalsIMGUI.btnSaveInits.OnClick = function ()
+        SaveInitialParameters()
+    end
+    
+    local btnLoadInits = p:AddButton('Load parameters')
+    btnLoadInits.SameLine = true
+    btnLoadInits.OnClick = function ()
+        RestoreInitialParameters()
+    end
+    
     GlobalsIMGUI.group = p:AddGroup('xd')
+    
+    GlobalsIMGUI.groupText = p:AddGroup('Text')
 
 
 end
