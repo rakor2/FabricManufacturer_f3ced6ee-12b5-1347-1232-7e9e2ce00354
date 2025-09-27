@@ -25,27 +25,35 @@ end
 
 
 function Window:FMWindow()
-    FMWindow = Ext.IMGUI.NewWindow("quick small animation thingy")
+    FMWindow = Ext.IMGUI.NewWindow("Fabric Manufacturer")
     FMWindow.Open = OPENQUESTIONMARK
     FMWindow.Closeable = true
     -- FMWindow.AlwaysAutoResize = true
-    FMWindow:SetSize({643, 700})
+    FMWindow:SetSize({643, 600})
 
-    mainTabBar = FMWindow:AddTabBar("LL")
+    -- mainTabBar = FMWindow:AddTabBar("TabBar")
 
-    p = mainTabBar:AddTabItem("Animations")
+    -- p = mainTabBar:AddTabItem("Main")
+
+    p = FMWindow
 
     StyleV2:RegisterWindow(FMWindow)
 
     ApplyStyle(FMWindow, 1)
 
-
-    MCM.SetKeybindingCallback('FM_toggle_window', function()
+    MCM.SetKeybindingCallback('fm_toggle_window', function()
         FMWindow.Open = not FMWindow.Open
     end)
 
+    GlobalsIMGUI.checkAuto = p:AddCheckbox('Automatic re-equip', true)
 
-    
+    local btnUpdateEquipment = p:AddButton('Get cloth parameters')
+    btnUpdateEquipment.OnClick = function ()
+        UpdateElements()
+    end
+
+
+    GlobalsIMGUI.group = p:AddGroup('xd')
 
 
 end
